@@ -50,7 +50,6 @@ export class App extends Component {
     );
   };
   onDelete = event => {
-    const { contacts } = this.state;
     const id = event.currentTarget.id;
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
