@@ -8,8 +8,6 @@ export class App extends Component {
   state = {
     contacts: [],
     filter: '',
-    name: '',
-    number: '',
   };
 
   addContact = (name, number) => {
@@ -59,6 +57,7 @@ export class App extends Component {
         <div>
           <Form addContact={this.addContact} />
         </div>
+        <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.filterChange}></Filter>
         <ContactList dataContact={stats} onDelete={this.onDelete} />
       </>
